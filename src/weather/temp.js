@@ -19,6 +19,8 @@ function Temp() {
              const {temp, humidity, pressure} = data.main;
              const {main:weathermood} = data.weather[0];
 
+             const [count,setCount] = useState(1)
+
              const {name} = data;
              const {speed} = data.wind;
              const {country, sunset} = data.sys;
@@ -41,7 +43,10 @@ function Temp() {
     };
 
     useEffect(() => {
+       if(count==1){
         getWeatherinfo();
+        setCount(2);
+       }
     }, [])
     return (
         <>
