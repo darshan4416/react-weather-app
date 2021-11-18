@@ -7,7 +7,6 @@ import Weathercard from './weathercard';
 function Temp() {
     const [searchValue, setSearchValue] = useState("Indore");
     const [tempInfo, setTempInfo] = useState({});
-    const [count,setCount] = useState(1)
 
     const getWeatherinfo = async ()=>{
         let url = 
@@ -19,8 +18,6 @@ function Temp() {
 
              const {temp, humidity, pressure} = data.main;
              const {main:weathermood} = data.weather[0];
-
-            
 
              const {name} = data;
              const {speed} = data.wind;
