@@ -44,11 +44,10 @@ function Temp() {
     };
 
     useEffect(() => {
-       if(count==1){
+     
         getWeatherinfo();
-        setCount(2);
-       }
-    }, [])
+       
+    }, [])  // eslint-disable-line react-hooks/exhaustive-deps
     return (
         <>
         <div className="wrap">
